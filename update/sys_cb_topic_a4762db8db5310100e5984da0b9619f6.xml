@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <category display_value="ITSM Fulfiller">bfdd66da0b203300a1b16c2367673a1f</category>
+        <connect_queue/>
+        <description>Ingen aning</description>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.16",
+  "goals": {
+    "04a6fc87097f4a458afb794a0e0bb05b": {
+      "id": "04a6fc87097f4a458afb794a0e0bb05b",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "fd8462db1a1c4fcc8ffbbabb1a561c55": {
+          "id": "fd8462db1a1c4fcc8ffbbabb1a561c55",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "eddc3b32920e4f6cb93e3c8284ffbd00": {
+          "id": "eddc3b32920e4f6cb93e3c8284ffbd00",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "93ea9ca754e74c33bb598e338f574b89": {
+          "id": "93ea9ca754e74c33bb598e338f574b89",
+          "stepType": "Prompt",
+          "name": "Uffes",
+          "prompt": {
+            "value": "{{vaInputs.user.name}}",
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": "",
+          "variableId": "f7cf824a28da43a5a0da437710b3e17d"
+        }
+      },
+      "edges": [
+        {
+          "id": "2d29accdbfd940428d3b921f35bfddf3",
+          "edgeType": "Edge",
+          "source": "fd8462db1a1c4fcc8ffbbabb1a561c55",
+          "target": "93ea9ca754e74c33bb598e338f574b89",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f7eb6a3691f948f2b87ac9617006ae57",
+          "edgeType": "Edge",
+          "source": "93ea9ca754e74c33bb598e338f574b89",
+          "target": "eddc3b32920e4f6cb93e3c8284ffbd00",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "f7cf824a28da43a5a0da437710b3e17d": {
+      "id": "f7cf824a28da43a5a0da437710b3e17d",
+      "name": "uffes",
+      "label": "Uffes",
+      "varType": "string",
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <key_phrases>Uffe testar nr 1,värde</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Uffe testar nr 1</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <roles/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-14 11:56:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a4762db8db5310100e5984da0b9619f6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Uffe testar nr 1</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_cb_topic_a4762db8db5310100e5984da0b9619f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-14 11:58:51</sys_updated_on>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=a4762db8db5310100e5984da0b9619f6"/>
+</record_update>
